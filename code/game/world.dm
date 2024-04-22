@@ -382,15 +382,16 @@ GLOBAL_VAR(restart_counter)
 	if(length(features))
 		new_status += ": [jointext(features, ", ")]"
 
-	new_status += "<br>Beginner Friendly: <b>Learn to play SS13!</b>"
-	new_status += "<br>Roleplay: \[<b>Medium-Rare</b>\]"
+	new_status += "<br><b>Mais um servidor brasileiro nessa merda.</b>"
+	new_status += "<br><b>Aceitamos novatos!</b>"
+	new_status += "<br>\[<b>SERVIDOR SEM FRESCURA!</b>\]"
 
 	new_status += "<br>Time: <b>[gameTimestamp("hh:mm")]</b>"
 	if(SSmapping.config)
-		new_status += "<br>Map: <b>[SSmapping.config.map_path == CUSTOM_MAP_PATH ? "Uncharted Territory" : SSmapping.config.map_name]</b>"
+		new_status += "<br>Mapa: <b>[SSmapping.config.map_path == CUSTOM_MAP_PATH ? "Uncharted Territory" : SSmapping.config.map_name]</b>"
 	var/alert_text = SSsecurity_level.get_current_level_as_text()
 	if(alert_text)
-		new_status += "<br>Alert: <b>[capitalize(alert_text)]</b>"
+		new_status += "<br>Alerta: <b>[capitalize(alert_text)]</b>"
 
 	status = new_status
 
